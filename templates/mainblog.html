@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<h1 style="text-align: center;">Build A Blog</h1>
+<h1 style="text-align: center;">{{title}}</h1>
 {% for blog in blogs %}
-
-<a href='/blog?id={{blog.id}}'><h1 style='margin-bottom: 20px;'>{{blog.title}}</h1></a>
+<a href='/blog?blogid={{blog.id}}'><h1 style='margin-bottom: 20px;'>{{blog.title}}</h1></a>
 
 <p>{{blog.body}}</p>
-<hr />
+<p class='post-author'>
+    written by
+    <a href='/blog?userid={{blog.owner_id}}'>{{blog.author.username}}</a>
+</p>
+
 {% endfor %}
 {% endblock %}

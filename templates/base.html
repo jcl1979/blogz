@@ -6,20 +6,38 @@
             title {
                 text-align: center;
             }
-            label {
-                display: block; 
-                margin-bottom: 50px;  
-            }
             
+        
+            nav ul li {
+               list-style: none;
+               display: inline-block;
+               margin-right: 15px;
+            }
+            nav #user-account {
+                float: right;
+                
+            }
             .error{
                 color: red;   
+            }
+            .post-author{
+               font-size: 12px;
+               font-style: italic;
             }
         </style>
     </head>
     <body>
         <nav>
-        <a href='/blog'>Main Blog Page</a>
-        <a href='/newpost'>Add a Blog Entry</a>
+            <ul id='user-account'>
+                <li><a href='/login'>login</a></li>
+                <li><a href='/logout'>logout</a></li>
+            </ul>
+            <ul>
+                <li><a href='/'>home</a></li>
+                <li><a href='/blog'>all posts</a></li>
+                <li><a href='/newpost'>new post</a></li>
+            </ul>
+            
         </nav>
 
 
